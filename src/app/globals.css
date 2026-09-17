@@ -1,26 +1,182 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-premium-black: #111111;
+  --color-charcoal: #1c1c1c;
+  --color-gold: #e2231a;
+  --color-gold-light: #ff4d4d;
+  --color-warm-white: #f7f7f5;
+  --color-pure-white: #ffffff;
+  --color-text-primary: #171717;
+  --color-text-secondary: #6b6b6b;
+  --color-border: #e5e5e5;
+  --color-success: #16803c;
+
+  --background: var(--color-warm-white);
+  --foreground: var(--color-text-primary);
 }
 
 @theme inline {
+  --color-black: #111111;
+  --color-charcoal: #1c1c1c;
+  --color-gold: #e2231a;
+  --color-gold-light: #ff4d4d;
+  --color-warm-white: #f7f7f5;
+  --color-border: #e5e5e5;
+  --color-success: #16803c;
+  --color-text-secondary: #6b6b6b;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-poppins);
+  --font-display: var(--font-oswald);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.gold-line {
+  height: 2px;
+  width: 56px;
+  background: var(--color-gold);
+}
+
+.hero-red-glow {
+  background:
+    radial-gradient(ellipse 100% 65% at 50% 2%, rgba(255, 45, 30, 0.95), transparent 62%),
+    radial-gradient(ellipse 75% 45% at 50% 0%, rgba(255, 90, 70, 0.65), transparent 72%),
+    linear-gradient(180deg, #8a0f0a 0%, #4a0906 35%, #1a0503 65%, #0d0d0d 90%);
+}
+
+.card-notch {
+  clip-path: polygon(
+    18px 0,
+    calc(100% - 18px) 0,
+    100% 18px,
+    100% calc(100% - 18px),
+    calc(100% - 18px) 100%,
+    18px 100%,
+    0 calc(100% - 18px),
+    0 18px
+  );
+}
+
+.panel-notch {
+  clip-path: polygon(
+    36px 0,
+    calc(100% - 36px) 0,
+    100% 36px,
+    100% calc(100% - 36px),
+    calc(100% - 36px) 100%,
+    36px 100%,
+    0 calc(100% - 36px),
+    0 36px
+  );
+}
+
+.text-metal {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f2f2f2 22%,
+    #b7b7b7 48%,
+    #8a8a8a 58%,
+    #e8e8e8 75%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(40, 5, 5, 0.55);
+  filter: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.45));
+}
+
+.plaque-notch {
+  clip-path: polygon(
+    26px 0,
+    calc(100% - 26px) 0,
+    100% 26px,
+    100% 100%,
+    0 100%,
+    0 26px
+  );
+}
+
+.panel-notch-sm {
+  clip-path: polygon(
+    22px 0,
+    calc(100% - 22px) 0,
+    100% 22px,
+    100% calc(100% - 22px),
+    calc(100% - 22px) 100%,
+    22px 100%,
+    0 calc(100% - 22px),
+    0 22px
+  );
+}
+
+.ruler-ticks {
+  height: 14px;
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.25) 0,
+    rgba(255, 255, 255, 0.25) 1px,
+    transparent 1px,
+    transparent 28px
+  );
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 100% 8px;
+}
+
+.pill-tab {
+  padding: 0.55rem 1.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+  border-radius: 999px;
+}
+
+.container-page {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .container-page {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+.text-metal {
+  background: linear-gradient(
+    #fff 0%,
+    #f2f2f2 22%,
+    #ffffff 48%,
+    #fbfbfb 58%,
+    #e8e8e8 75%,
+    #fff 100%
+  );
+
+  color: transparent;
+
+  -webkit-text-stroke: 1.5px #2805058c;
+
+  filter: drop-shadow(0 3px 2px #00000073);
+
+  -webkit-background-clip: text;
+  background-clip: text;
 }
