@@ -262,49 +262,49 @@ export default function Hero() {
           "
         >
           <StaggerItem>
-            <div className="relative aspect-[16/10] overflow-hidden">
-              <Image
-                src="/inside-1.png"
-                alt="Baba Motors showroom interior"
-                fill
-                className="object-cover"
-              />
+          <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-white/20">
+  <Image
+    src="/inside-1.png"
+    alt="Baba Motors showroom interior"
+    fill
+    className="object-cover"
+  />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
 
-              <div className="absolute bottom-0 left-0 p-5">
-                <p className="text-white font-display font-semibold uppercase text-sm tracking-wide">
-                  Built For Trust
-                </p>
+  <div className="absolute bottom-0 left-0 p-5">
+    <p className="text-white font-display font-semibold uppercase text-sm tracking-wide">
+      Built For Trust
+    </p>
 
-                <p className="text-white/60 text-xs mt-1 max-w-[220px]">
-                  Every car inspected and quality-checked before it reaches you.
-                </p>
-              </div>
-            </div>
+    <p className="text-white/60 text-xs mt-1 max-w-[220px]">
+      Every car inspected and quality-checked before it reaches you.
+    </p>
+  </div>
+</div>
           </StaggerItem>
 
           <StaggerItem>
-            <div className="relative aspect-[16/10] overflow-hidden">
-              <Image
-                src="/inside-2.png"
-                alt="Baba Motors test drive experience"
-                fill
-                className="object-cover"
-              />
+        <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-white/20">
+  <Image
+    src="/inside-2.png"
+    alt="Baba Motors test drive experience"
+    fill
+    className="object-cover"
+  />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
 
-              <div className="absolute bottom-0 left-0 p-5">
-                <p className="text-white font-display font-semibold uppercase text-sm tracking-wide">
-                  Smart. Simple. Trustworthy.
-                </p>
+  <div className="absolute bottom-0 left-0 p-5">
+    <p className="text-white font-display font-semibold uppercase text-sm tracking-wide">
+      Smart. Simple. Trustworthy.
+    </p>
 
-                <p className="text-white/60 text-xs mt-1 max-w-[220px]">
-                  Transparent pricing and real photos for every listed car.
-                </p>
-              </div>
-            </div>
+    <p className="text-white/60 text-xs mt-1 max-w-[220px]">
+      Transparent pricing and real photos for every listed car.
+    </p>
+  </div>
+</div>
           </StaggerItem>
         </StaggerGrid>
       </div>
