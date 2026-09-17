@@ -1,20 +1,21 @@
+import Image from "next/image";
+
 interface LogoProps {
   dark?: boolean;
+  className?: string;
 }
 
-export default function Logo({ dark = false }: LogoProps) {
-  const textColor = dark ? "text-white" : "text-black";
+export default function Logo({
+  className = "",
+}: LogoProps) {
   return (
-    <div className="flex flex-col leading-none select-none">
-      <span className={`font-display text-2xl font-bold tracking-wide ${textColor}`}>
-        BABA<span className="text-gold">.</span>
-      </span>
-      <span className="flex items-center gap-1.5">
-        <span className="gold-line !w-4" />
-        <span className={`text-[10px] font-semibold uppercase tracking-[0.25em] ${dark ? "text-white/70" : "text-text-secondary"}`}>
-          Motors
-        </span>
-      </span>
-    </div>
+    <Image
+      src="/logo.png"
+      alt="Baba Motors"
+      width={180}
+      height={60}
+      priority
+      className={`h-auto w-[125px] object-contain sm:w-[145px] lg:w-[175px] ${className}`}
+    />
   );
 }

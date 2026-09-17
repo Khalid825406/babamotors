@@ -180,3 +180,27 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
 }
+@keyframes carEnterFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-180px) scale(0.96);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateX(25px) scale(1);
+  }
+
+  80% {
+    transform: translateX(-8px) scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.animate-car-enter {
+  animation: carEnterFromLeft 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}

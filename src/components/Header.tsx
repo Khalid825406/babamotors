@@ -98,13 +98,13 @@ export default function Header() {
         <div className="flex h-[76px] items-center justify-between gap-5 lg:h-[82px]">
           
           {/* ================= LOGO ================= */}
-          <Link
-            href="/"
-            aria-label="Baba Motors Home"
-            className="flex shrink-0 items-center"
-          >
-            <Logo dark />
-          </Link>
+       <Link
+  href="/"
+  aria-label="Baba Motors Home"
+  className="flex shrink-0 items-center"
+>
+  <Logo dark />
+</Link>
 
           {/* ================= DESKTOP NAVIGATION ================= */}
           <nav
